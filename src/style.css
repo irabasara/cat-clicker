@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a091d;
+  font-family: Rubik, sans-serif;
+  box-sizing: border-box;
+}
+
+.clicker-container {
+  padding: 80px 20px;
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.head h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #f0ffff;
+  user-select: none;
+}
+
+.head img {
+  width: 40px;
+  object-fit: cover;
+}
+
+.circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle img {
+  max-width: 60%;
+  object-fit: cover;
+  box-shadow: 0 0 36px #a8470063;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+  transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
+}
+
+.plus-one {
+  position: absolute;
+  font-family: Inter;
+  text-shadow: 0px 0px 4px rgba(84, 0, 73, 0.25);
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #e4dfcd 0%, #f1cdad 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  user-select: none;
+  animation: move-up 5s forwards;
+}
+
+@keyframes move-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+}
