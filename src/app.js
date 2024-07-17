@@ -64,3 +64,11 @@ $circle.addEventListener("click", (event) => {
 });
 
 start();
+
+document.addEventListener(
+  "dblclick",
+  function (event) {
+    event.preventDefault();
+  },
+  { passive: false }
+);
