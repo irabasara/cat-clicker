@@ -13,10 +13,10 @@ function setScore(score) {
 
 function setImage() {
   if (getScore() >= 50) {
-    $circle.setAttribute("src", "/src/assets/happy-cat.png");
+    $circle.setAttribute("src", "./src/assets/happy-cat.png");
   }
   if (getScore() >= 100) {
-    $circle.setAttribute("src", "/src/assets/super-cat.png");
+    $circle.setAttribute("src", "./src/assets/super-cat.png");
   }
 }
 
